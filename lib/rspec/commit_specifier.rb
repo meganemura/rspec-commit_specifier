@@ -1,6 +1,6 @@
 require "rspec/commit_specifier/version"
 
-module Rspec
+module RSpec
   module CommitSpecifier
     # Your code goes here...
   end

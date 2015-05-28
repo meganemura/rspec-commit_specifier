@@ -5,7 +5,7 @@ require 'rspec/commit_specifier/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rspec-commit_specifier"
-  spec.version       = Rspec::CommitSpecifier::VERSION
+  spec.version       = RSpec::CommitSpecifier::VERSION
   spec.authors       = ["meganemura"]
   spec.email         = ["meganemura@users.noreply.github.com"]
 
