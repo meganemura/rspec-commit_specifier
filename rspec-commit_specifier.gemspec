@@ -5,7 +5,7 @@ require 'rspec/commit_specifier/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rspec-commit_specifier"
-  spec.version       = Rspec::CommitSpecifier::VERSION
+  spec.version       = RSpec::CommitSpecifier::VERSION
   spec.authors       = ["meganemura"]
   spec.email         = ["meganemura@users.noreply.github.com"]
 
@@ -27,6 +27,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "rugged"
+
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "guard-rspec"
 end
