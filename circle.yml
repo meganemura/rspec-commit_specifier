@@ -1,0 +1,11 @@
+dependencies:
+  pre:
+    - git fetch --unshallow origin master || true
+    - git fetch origin +refs/heads/*:refs/remotes/origin/*
+    - git branch --verbose --all
+    - git remote --verbose
+    - gem install bundler
+    - bundle version
+test:
+  override:
+    - bundle exec rake ci
