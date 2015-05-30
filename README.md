@@ -1,5 +1,6 @@
 # RSpec::GitSpecifier
 [![Build Status](https://travis-ci.org/meganemura/rspec-git_specifier.svg?branch=master)](https://travis-ci.org/meganemura/rspec-git_specifier)
+[![Circle CI](https://circleci.com/gh/meganemura/rspec-git_specifier/tree/master.svg?style=svg)](https://circleci.com/gh/meganemura/rspec-git_specifier/tree/master)
 
 The collection of helper methods to test git something.
 
