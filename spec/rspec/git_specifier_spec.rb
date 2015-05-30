@@ -26,4 +26,10 @@ describe RSpec::GitSpecifier do
       it { is_expected.to all(match(/\A(?:[A-Z0-9]|#{commands.join('|')})/)) }
     end
   end
+
+  describe 'current branch name' do
+    subject { current_branch.name }
+
+    it { is_expected.to match(/[a-z0-9-]+/) }
+  end
 end

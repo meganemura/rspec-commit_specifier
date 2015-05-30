@@ -26,5 +26,9 @@ module RSpec
     def master_object_id
       repository.ref('refs/remotes/origin/master').target_id
     end
+
+    def current_branch
+      repository.branches.detect(&:head?)
+    end
   end
 end
