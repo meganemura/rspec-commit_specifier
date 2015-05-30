@@ -28,7 +28,16 @@ module RSpec
     end
 
     def current_branch
-      repository.branches.detect(&:head?)
+      travis_branch || repository.branches.detect(&:head?)
+    end
+
+    def travis_branch
+      name = ENV['TRAVIS_BRANCH']
+      return unless name
+
+      repository.branches.detect do |branch|
+        branch.name == name
+      end
     end
   end
 end
