@@ -22,8 +22,9 @@ describe RSpec::GitSpecifier do
       it { is_expected.to all(match(/\A.*(?:\n\Z|\n\n)/)) }   # force second line to be blank
       it { is_expected.to all(match(/\A.*[^.]\n/)) }          # force first line to end with [^.]
 
+      # start with uppercase character or command
       commands = %w(bundle rake rails guard sed)
-      it { is_expected.to all(match(/\A(?:[A-Z0-9]|#{commands.join('|')})/)) }  # start with uppercase or command
+      it { is_expected.to all(match(/\A(?:[A-Z0-9]|#{commands.join('|')})/)) }
     end
   end
 end
