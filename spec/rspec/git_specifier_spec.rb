@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe RSpec::CommitSpecifier do
+describe RSpec::GitSpecifier do
   include described_class
 
   it 'has a version number' do
-    expect(RSpec::CommitSpecifier::VERSION).not_to be nil
+    expect(RSpec::GitSpecifier::VERSION).not_to be nil
   end
 
   describe 'commits' do

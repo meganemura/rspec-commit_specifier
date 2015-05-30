@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rspec/commit_specifier/version'
+require 'rspec/git_specifier/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rspec-commit_specifier"
-  spec.version       = RSpec::CommitSpecifier::VERSION
+  spec.name          = "rspec-git_specifier"
+  spec.version       = RSpec::GitSpecifier::VERSION
   spec.authors       = ["meganemura"]
   spec.email         = ["meganemura@users.noreply.github.com"]
 
