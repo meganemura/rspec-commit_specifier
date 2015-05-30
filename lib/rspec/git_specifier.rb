@@ -26,5 +26,18 @@ module RSpec
     def master_object_id
       repository.ref('refs/remotes/origin/master').target_id
     end
+
+    def current_branch
+      travis_branch || repository.branches.detect(&:head?)
+    end
+
+    def travis_branch
+      name = ENV['TRAVIS_BRANCH']
+      return unless name
+
+      repository.branches.detect do |branch|
+        branch.name == name
+      end
+    end
   end
 end
