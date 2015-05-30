@@ -2,7 +2,7 @@ require "rspec/commit_specifier/version"
 require "rugged"
 
 module RSpec
-  module CommitSpecifier
+  module GitSpecifier
     def repository
       Rugged::Repository.discover(current_directory)
     end

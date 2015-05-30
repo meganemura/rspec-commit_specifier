@@ -1,1 +1,1 @@
-# RSpec::CommitSpecifier
+# RSpec::GitSpecifier
