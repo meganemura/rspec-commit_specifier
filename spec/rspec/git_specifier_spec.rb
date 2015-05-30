@@ -12,7 +12,6 @@ describe RSpec::GitSpecifier do
 
     it 'returns commits' do
       expect(commits.count).to be >= 0
-      expect(commits.map(&:message)).to all(be)
     end
 
     describe 'messages' do
