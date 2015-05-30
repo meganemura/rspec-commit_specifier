@@ -11,7 +11,7 @@ module RSpec
       Dir.pwd
     end
 
-    def gits
+    def commits
       walker.walk
     end
 
