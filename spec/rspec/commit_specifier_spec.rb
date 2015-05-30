@@ -7,12 +7,12 @@ describe RSpec::GitSpecifier do
     expect(RSpec::GitSpecifier::VERSION).not_to be nil
   end
 
-  describe 'commits' do
-    subject { commits }
+  describe 'gits' do
+    subject { gits }
 
-    it 'returns commits' do
-      expect(commits.count).to be >= 0
-      expect(commits.map(&:message)).to all(be)
+    it 'returns gits' do
+      expect(gits.count).to be >= 0
+      expect(gits.map(&:message)).to all(be)
     end
 
     describe 'messages' do

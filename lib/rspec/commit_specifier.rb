@@ -1,4 +1,4 @@
-require "rspec/commit_specifier/version"
+require "rspec/git_specifier/version"
 require "rugged"
 
 module RSpec
@@ -11,7 +11,7 @@ module RSpec
       Dir.pwd
     end
 
-    def commits
+    def gits
       walker.walk
     end
 
