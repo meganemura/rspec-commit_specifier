@@ -7,8 +7,8 @@ describe RSpec::GitSpecifier do
     expect(RSpec::GitSpecifier::VERSION).not_to be nil
   end
 
-  describe 'commits' do
-    subject { commits }
+  describe 'commits without merge commits' do
+    subject { commits.reject {|c| c.message.match(/\AMerge/) } }
 
     it 'returns commits' do
       expect(commits.count).to be >= 0
